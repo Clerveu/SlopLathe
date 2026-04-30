@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/run/combat_feedback_manager.gd" id="feedback_script"]
+[ext_resource type="Script" path="res://scenes/run/combat_manager.gd" id="script"]
+
+[node name="RunScene" type="Node2D"]
+script = ExtResource("script")
+
+[node name="CombatFeedbackManager" type="Node2D" parent="."]
+script = ExtResource("feedback_script")
+
+[node name="PartyWipeLabel" type="Label" parent="."]
+visible = false
+offset_left = 110.0
+offset_top = 80.0
+offset_right = 210.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.9, 0.8, 1)
+theme_override_font_sizes/font_size = 12
+text = "PARTY WIPED"
+horizontal_alignment = 1

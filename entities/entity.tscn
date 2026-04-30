@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://entities/entity.gd" id="script"]
+[ext_resource type="Script" path="res://entities/components/health_component.gd" id="health_script"]
+[ext_resource type="Script" path="res://entities/components/hp_bar.gd" id="hp_bar_script"]
+[ext_resource type="Script" path="res://entities/components/modifier_component.gd" id="modifier_script"]
+[ext_resource type="Script" path="res://entities/components/ability_component.gd" id="ability_script"]
+[ext_resource type="Script" path="res://entities/components/status_effect_component.gd" id="status_effect_script"]
+[ext_resource type="Script" path="res://entities/components/behavior_component.gd" id="behavior_script"]
+[ext_resource type="Script" path="res://entities/components/trigger_component.gd" id="trigger_script"]
+
+[node name="Entity" type="Node2D"]
+script = ExtResource("script")
+
+[node name="ShadowSprite" type="AnimatedSprite2D" parent="."]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="EffectsLayer" type="Node2D" parent="."]
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("health_script")
+
+[node name="ModifierComponent" type="Node" parent="."]
+script = ExtResource("modifier_script")
+
+[node name="AbilityComponent" type="Node" parent="."]
+script = ExtResource("ability_script")
+
+[node name="StatusEffectComponent" type="Node" parent="."]
+script = ExtResource("status_effect_script")
+
+[node name="BehaviorComponent" type="Node" parent="."]
+script = ExtResource("behavior_script")
+
+[node name="TriggerComponent" type="Node" parent="."]
+script = ExtResource("trigger_script")
+
+[node name="HPBar" type="Node2D" parent="."]
+position = Vector2(-8, -18)
+script = ExtResource("hp_bar_script")
